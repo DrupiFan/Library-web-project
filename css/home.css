@@ -1,0 +1,176 @@
+/* Home page specific styles */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.book-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.book-card h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.book-card p {
+    color: #4a5568;
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.book-card .category {
+    display: inline-block;
+    background: #ebf8ff;
+    color: #2b6cb0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 8px 0;
+}
+
+.book-card .stock {
+    color: #48bb78;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.book-card .stock:empty {
+    display: none;
+}
+
+.book-card form {
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.book-card .btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-card .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Modern Welcome Section */
+.modern-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.08);
+    padding: 2.5rem 2rem;
+    margin-bottom: 3rem;
+    min-height: 320px;
+    flex-wrap: wrap;
+}
+
+.welcome-image {
+    flex: 0 0 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-image img {
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.07);
+    background: #f4f8fb;
+}
+
+.welcome-content {
+    flex: 1 1 320px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-content h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.welcome-content p {
+    color: #4a5568;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+    }
+    .modern-welcome {
+        flex-direction: column;
+        padding: 1.2rem 0.5rem;
+        gap: 1rem;
+        min-height: unset;
+    }
+    .welcome-image img {
+        max-width: 180px;
+    }
+    .welcome-content h2 {
+        font-size: 1.3rem;
+    }
+    .welcome-content p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .books-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .modern-welcome {
+        padding: 0.7rem 0.2rem;
+    }
+    .welcome-image img {
+        max-width: 120px;
+    }
+    .welcome-content h2 {
+        font-size: 1.1rem;
+    }
+    .welcome-content p {
+        font-size: 0.97rem;
+    }
+} 

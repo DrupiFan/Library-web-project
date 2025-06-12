@@ -1,0 +1,261 @@
+/* Common styles for all pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-brand i {
+    color: #3498db;
+    font-size: 1.8rem;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: #f8f9fa;
+    color: #3498db;
+}
+
+.nav-link i {
+    font-size: 1.1rem;
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-danger {
+    background-color: #e53e3e;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c53030;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2b6cb0;
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.1);
+}
+
+/* Messages */
+.message {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.message-success {
+    background-color: #c6f6d5;
+    color: #2f855a;
+    border: 1px solid #9ae6b4;
+}
+
+.message-error {
+    background-color: #fed7d7;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #f7fafc;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+tr:hover {
+    background-color: #f7fafc;
+}
+
+/* Welcome section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.welcome-section p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .container {
+        padding: 1rem 0.5rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.7rem 0.5rem;
+        gap: 0.5rem;
+    }
+    .navbar-brand {
+        margin-bottom: 0.5rem;
+    }
+    .navbar-menu {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+    }
+    .nav-link {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.98rem;
+    }
+    .container {
+        padding: 0.5rem;
+    }
+}
+@media (max-width: 500px) {
+    .navbar {
+        padding: 0.4rem 0.2rem;
+    }
+    .navbar-brand a {
+        font-size: 1.1rem;
+    }
+    .container {
+        padding: 0.2rem;
+    }
+    body {
+        font-size: 0.97rem;
+    }
+} 
